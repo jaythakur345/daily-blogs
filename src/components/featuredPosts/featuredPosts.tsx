@@ -4,12 +4,12 @@ import React from 'react'
 import { TPost } from '../types'
 
 async function getData() {
-    const apiUrl = process.env.API_URL; 
+    const apiUrl = process?.env?.API_URL; 
     const res = await fetch(`${apiUrl}/api/post`, { cache: 'no-store' })
-    if (!res.ok) {
+    if (!res?.ok) {
         throw new Error('Failed to fetch data')
     }
-    return res.json()
+    return res?.json()
 }
 
 const FeaturedPosts = async () => {
@@ -23,7 +23,7 @@ const FeaturedPosts = async () => {
                         return <div className="p-4 md:w-1/3">
                             <Link href={`post/${post?._id}`}>
                                 <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                                    <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={post.img || "https://images.pexels.com/photos/267569/pexels-photo-267569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} alt="blog" />
+                                    <img className="lg:h-48 md:h-36 w-full object-cover object-center" src={post?.img || "https://images.pexels.com/photos/267569/pexels-photo-267569.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} alt="blog" />
                                     <div className="p-6">
                                         <h2 className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">{post?.category}</h2>
                                         <h2 className="title-font text-lg font-medium text-gray-900 mb-3">{trimToLength(post?.title as string, 20)}</h2>
