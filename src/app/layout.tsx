@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] })
 const manrope = Manrope({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Blog App',
+  title: 'Daily Blog',
   description: 'This is cms appliction',
 }
 
