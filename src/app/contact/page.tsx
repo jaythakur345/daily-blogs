@@ -16,7 +16,7 @@ const Contact = () => {
         console.log("contact", contact);
 
         try {
-            const res = await fetch("api/contact",
+            const res = await fetch("/api/contact",
                 {
                     method: "POST",
                     headers: {

@@ -5,10 +5,10 @@ import Testimonial from '@/components/testimonials/testimonial'
 export default function Home() {
   return (
     <div>
-       <HeroSection />
-       {/* Featured posts */}
+       {/* <HeroSection />
        <FeaturedPosts />
-       <Testimonial />
+       <Testimonial /> */}
+       Hello World
     </div>
   )
 }

@@ -1,11 +1,10 @@
 import { TPost } from '@/components/types'
-import getServerUrl from '@/utils/serverUrl'
 import Image from 'next/image'
 import React from 'react'
 
 async function getData(id:any) {
-    console.log("slug", id);
-    const res = await fetch(`${getServerUrl()}/api/post/${id}`, { cache: 'no-store' })
+    const apiUrl = process.env.API_URL;
+    const res = await fetch(`${apiUrl}/api/post/${id}`, { cache: 'no-store' })
     if (!res.ok) {
         throw new Error('Failed to fetch data')
     }
