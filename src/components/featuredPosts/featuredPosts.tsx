@@ -1,4 +1,3 @@
-import getServerUrl from '@/utils/serverUrl'
 import trimToLength from '@/utils/trimToLength'
 import Link from 'next/link'
 import React from 'react'
